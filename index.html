@@ -170,7 +170,7 @@ My expertise spans machine learning, cloud architecture, and full-stack developm
 								<p>A Movie recommendation system based around constellations.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/t2c.jpg" alt="" /></a>
+								<div class="image fit thumb"><img src="images/thumbs/t2c.jpg" alt="" /></div>
 								<div class="project-header">
 									<h3>Text 2 Comic</h3>
 									<a href="https://github.com/Sahasraditya/text2comic" class="github-link" target="_blank" title="View on GitHub">
@@ -180,7 +180,7 @@ My expertise spans machine learning, cloud architecture, and full-stack developm
 								<p>Convert Text to Comic Strips using AI</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/news-agg.png" alt="" /></a>
+								<div class="image fit thumb"><img src="images/thumbs/news-agg.png" alt="" /></div>
 								<div class="project-header">
 									<h3>News-Aggregator App</h3>
 									<a href="https://github.com/Sahasraditya/news-aggregator" class="github-link" target="_blank" title="View on GitHub">
@@ -190,7 +190,7 @@ My expertise spans machine learning, cloud architecture, and full-stack developm
 								<p>A Kotlin based app to get personalized news.</p>
 							</article>
 							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/cricgpt.jpg" alt="" /></a>
+								<div class="image fit thumb"><img src="images/thumbs/cricgpt.jpg" alt="" /></div>
 								<div class="project-header">
 									<h3>IPL Statistics Chatbot</h3>
 									<a href="https://github.com/Sahasraditya/ipl-stats-chatbot" class="github-link" target="_blank" title="View on GitHub">
@@ -199,6 +199,17 @@ My expertise spans machine learning, cloud architecture, and full-stack developm
 								</div>
 								<p>A chatbot using Langchain to get cricket statistics.</p>
 							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<div class="image fit thumb"><img src="images/thumbs/music-app.png" alt="" /></div>
+								<div class="project-header">
+									<h3>Music Separation App</h3>
+									<a href="https://github.com/Sahasraditya/music-component-seperator" class="github-link" target="_blank" title="View on GitHub">
+										<i class="fab fa-github"></i>
+									</a>
+								</div>
+								<p>A Deep Learning based Application to separate the various components of audio.</p>
+							</article>
+						
 						</div>
 					</section>
 
@@ -208,16 +219,25 @@ My expertise spans machine learning, cloud architecture, and full-stack developm
 						<p>I am currently looking for new opportunites, and my inbox is always open. </p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+								<form method="POST" action="https://formspree.io/f/xzzgzqdn">
+								<div class="row gtr-uniform gtr-50">
+									<div class="col-6 col-12-xsmall">
+									<input type="text" name="name" placeholder="Name" required />
 									</div>
+									<div class="col-6 col-12-xsmall">
+									<input type="email" name="email" placeholder="Email" required />
+									</div>
+									<div class="col-12">
+									<textarea name="message" placeholder="Message" rows="4" required></textarea>
+									</div>
+									<div class="col-12">
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
+									</ul>
+									</div>
+								</div>
 								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
+
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
@@ -238,7 +258,7 @@ My expertise spans machine learning, cloud architecture, and full-stack developm
 					<ul class="icons">
 						<li><a href="https://www.linkedin.com/in/saha-thyadi" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
 						<li><a href="https://www.github.com/Sahasraditya" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
-						<li><a href="saha.thyadi@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						 <a href="mailto:saha.thyadi@gmail.com" class="icon solid fa-envelope"></a>
 					</ul>
 				</div>
 			</footer>
