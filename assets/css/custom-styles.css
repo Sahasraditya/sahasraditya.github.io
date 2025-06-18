@@ -1,0 +1,446 @@
+
+header.major {
+    padding-top: 20px; /* Adjust the value as needed */
+}
+/* Navigation Header */
+.nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* background: rgba(27, 31, 34, 0.98); */
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    padding: 1rem 0;
+    /* color: #333; */
+    /* border-bottom: 1px solid rgba(255,255,255,0.1); */
+}
+
+.about_me {
+    color: #333333; /* Dark gray for normal text */
+}
+
+.about_me strong {
+    color: #000000; /* Pure black for bolded text */
+    font-weight: 900; /* Extra thick weight */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.nav-menu li a:hover {
+    background: #49bf9d;
+    color: white;
+    border-color: #49bf9d;
+    transform: translateY(-2px);
+}
+
+/* Sidebar adjustments */
+#header {
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 1000;
+    background: rgba(27, 31, 34, 0.98);
+    backdrop-filter: blur(10px);
+}
+
+#main {
+    margin-left: 220px;
+    padding-top: 70px;
+}
+
+/* Project layout changes */
+/* Original Project Item Styles */
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    background: rgba(0,0,0,0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.project-item:nth-child(even) .project-image {
+    order: 2;
+}
+
+.project-item:nth-child(even) .project-content {
+    order: 1;
+}
+
+.project-image {
+    flex: 0 0 300px;
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-content h3 {
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project-content p {
+    margin: 0 0 1rem 0;
+    line-height: 1.6;
+}
+
+.project-content ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.project-content ul li {
+    margin-bottom: 5px;
+    list-style-type: disc;
+}
+
+.project-content ul li::marker {
+    color: #49bf9d; /* Match your theme color */
+}
+
+.github-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.2s ease;
+}
+
+.github-link:hover {
+    color: #49bf9d;
+}
+
+/* Tech Stack Styles */
+.tech-stack {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.tech-stack h4 {
+    margin: 0 0 0.8rem 0;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tech-logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.tech-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.tech-logo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.tech-logo img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.tech-logo i {
+    font-size: 24px;
+}
+
+/* Specific tech logo colors */
+.tech-logo.python i { color: #3776ab; }
+.tech-logo.tensorflow i { color: #ff6f00; }
+.tech-logo.opencv i { color: #5c3ee8; }
+.tech-logo.flask i { color: #000; }
+.tech-logo.javascript i { color: #f7df1e; }
+.tech-logo.html i { color: #e34f26; }
+.tech-logo.css i { color: #1572b6; }
+.tech-logo.react i { color: #61dafb; }
+.tech-logo.nodejs i { color: #339933; }
+
+/* Tooltip */
+.tech-logo::after {
+    content: attr(data-tech);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 10;
+}
+
+.tech-logo:hover::after {
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .project-item:nth-child(even) .project-image,
+    .project-item:nth-child(even) .project-content {
+        order: initial;
+    }
+    
+    .project-image {
+        flex: none;
+        width: 100%;
+    }
+    
+    .tech-logos {
+        justify-content: center;
+    }
+}
+
+.see-more-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.see-more-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #49bf9d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.see-more-btn:hover {
+    background: #3da382;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    #header {
+        width: 150px;
+    }
+    
+    #main {
+        margin-left: 170px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-header {
+        background: rgba(27, 31, 34, 0.95);
+    }
+    
+    #header {
+        position: relative;
+        width: 100%;
+        height: auto;
+        margin-bottom: 2rem;
+        background: rgba(27, 31, 34, 0.98);
+    }
+    
+    #main {
+        margin-left: 0;
+        padding-top: 60px;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-menu {
+        gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .nav-menu li a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .project-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .project-item:nth-child(even) .project-image,
+    .project-item:nth-child(even) .project-content {
+        order: initial;
+    }
+    
+    .project-image {
+        flex: none;
+        width: 100%;
+    }
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.project-header h3 {
+    margin: 0;
+    flex: 1;
+}
+
+.image.fit.thumb img {
+    width: 100%;
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images fill the box and crop if needed */
+    border-radius: 4px;
+}
+
+.github-link {
+    margin-left: 10px;
+    font-size: 1.2em;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.github-link:hover {
+    color: #0366d6;
+}
+
+.education-item {
+    margin-bottom: 1.5em;
+    padding: 1em;
+    background: rgba(0,0,0,0.02);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.education-content {
+    flex: 1;
+}
+
+.education-item h4 {
+    margin: 0 0 0.5em 0;
+    color: #333;
+}
+
+.education-item .degree {
+    font-weight: bold;
+    color: #666;
+}
+
+.education-item .year {
+    color: #999;
+    font-style: italic;
+}
+
+.college-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #49bf9d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.resume-button:hover {
+    background: #3da382;
+    color: white;
+}
+
+.resume-button i {
+    font-size: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .education-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .college-logo {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}

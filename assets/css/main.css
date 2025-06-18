@@ -1765,7 +1765,7 @@ input, select, textarea {
 	}
 
 	header p {
-		color: #b2b2b2;
+		color: #1f1815;
 		position: relative;
 		margin: 0 0 1.5em 0;
 	}
@@ -3058,7 +3058,7 @@ input, select, textarea {
 			}
 
 			header.major h2 {
-				font-size: 1.35em;
+				font-size: 1.50em;
 			}
 
 		/* List */

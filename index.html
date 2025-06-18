@@ -6,100 +6,24 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom-styles.css" />
 		<!-- Font Awesome for icons -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-		<style>
-			.project-header {
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-				margin-bottom: 0.5em;
-			}
-			.project-header h3 {
-				margin: 0;
-				flex: 1;
-			}
-			.image.fit.thumb img {
-	width: 100%;
-	height: 200px; /* Set a fixed height */
-	object-fit: cover; /* Ensures images fill the box and crop if needed */
-	border-radius: 4px;
-}
-
-			.github-link {
-				margin-left: 10px;
-				font-size: 1.2em;
-				color: #333;
-				transition: color 0.3s ease;
-			}
-			.github-link:hover {
-				color: #0366d6;
-			}
-			.education-item {
-				margin-bottom: 1.5em;
-				padding: 1em;
-				background: rgba(0,0,0,0.02);
-				border-radius: 4px;
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-			}
-			.education-content {
-				flex: 1;
-			}
-			.education-item h4 {
-				margin: 0 0 0.5em 0;
-				color: #333;
-			}
-			.education-item .degree {
-				font-weight: bold;
-				color: #666;
-			}
-			.education-item .year {
-				color: #999;
-				font-style: italic;
-			}
-			.college-logo {
-				width: 80px;
-				height: 80px;
-				object-fit: contain;
-				margin-left: 20px;
-				border-radius: 8px;
-			}
-			.resume-button {
-				display: inline-flex;
-				align-items: center;
-				gap: 8px;
-				background: #49bf9d;
-				color: white;
-				text-decoration: none;
-				padding: 12px 24px;
-				border-radius: 4px;
-				transition: background-color 0.3s ease;
-				font-weight: bold;
-			}
-			.resume-button:hover {
-				background: #3da382;
-				color: white;
-			}
-			.resume-button i {
-				font-size: 1.1em;
-			}
-			
-			/* Responsive adjustments */
-			@media (max-width: 768px) {
-				.education-item {
-					flex-direction: column;
-					text-align: center;
-				}
-				.college-logo {
-					margin-left: 0;
-					margin-top: 15px;
-				}
-			}
-		</style>
 	</head>
 	<body class="is-preload">
+
+		<!-- Navigation Header -->
+		<nav class="nav-header">
+			<div class="nav-container">
+				<ul class="nav-menu">
+					<li><a href="#about">About</a></li>
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#education">Education</a></li>
+					<li><a href="#two">Projects</a></li>
+					<li><a href="#three">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
 
 		<!-- Header -->
 			<header id="header">
@@ -117,19 +41,50 @@
 			<div id="main">
 
 				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>Sahasraditya Thyadi</h2>
-						</header>
-						<p>I'm a Computer Science graduate student at CU Boulder with a passion for building scalable, intelligent applications. From crafting data pipelines that process millions of records to developing full-stack web apps with AI integration, I thrive on solving complex problems with elegant solutions.
-My expertise spans machine learning, cloud architecture, and full-stack development – whether it's engineering chatbots with LangChain, orchestrating microservices with Kubernetes, or creating interactive data visualizations.</p>
+					
+				<section>
+					<header class="major">
+						<h2 id="about">Sahasraditya Thyadi</h2>
+					</header>
+					<p class = 'about_me'>
+						I'm a software engineer who builds likes to build cool stuff. As a CS grad at CU Boulder, I specialize in building creative tools and turning them into production ready systems 
+					<p class = 'about_me'>
+						Whether I'm architecting <strong>backend systems</strong>, training <strong>ML models</strong>, or crafting <strong>full-stack applications</strong>, I focus on building software that's both technically robust and innovative. I work across the entire stack with 
+						<i class="fab fa-react" title="React" style="color:#61DBFB;"></i> <strong>React</strong>, 
+						<i class="fab fa-python" title="Python" style="color:#3776AB;"></i> <strong>Python</strong>, and 
+						<i class="fab fa-google" title="Google Cloud" style="color:#4285F4;"></i> <strong>GCP</strong>, leveraging modern tools like <strong>LangChain</strong>, <strong>Docker</strong>, and <strong>Kubernetes</strong> to ensure systems scale seamlessly from prototype to production.
+					</p>
+					<ul class="actions">
+						<li><a href="assets/resume/saha_new_swe_resume.pdf" target="_blank" class="resume-button">
+							<i class="fas fa-file-pdf"></i>
+							View Resume
+						</a></li>
+					</ul>
+				</section>
 
-						<ul class="actions">
-							<li><a href="assets/resume/saha_new_swe_resume.pdf" target="_blank" class="resume-button">
-								<i class="fas fa-file-pdf"></i>
-								View Resume
-							</a></li>
-						</ul>
+
+
+				<!-- Work Experience Section -->
+					<section id="experience">
+						<h2>Work Experience</h2>
+						<div class="education-item">
+							<div class="education-content">
+								<h4>Analyst</h4>
+								<div class="degree">Merkle</div>
+								<div class="year">2022-2024</div>
+								<!-- <p>Description of your role and achievements.</p> -->
+							</div>
+							<img src="images/thumbs/merkle-logo.png" alt="Company Logo" class="college-logo" />
+						</div>
+						<div class="education-item">
+							<div class="education-content">
+								<h4>Trainee Intern</h4>
+								<div class="degree">Bharat Electronics</div>
+								<div class="year">2022</div>
+								<!-- <p>Description of your internship and key projects.</p> -->
+							</div>
+							<img src="images/thumbs/be-logo.png" alt="Previous Company Logo" class="college-logo" />
+						</div>
 					</section>
 
 				<!-- Education Section -->
@@ -158,59 +113,264 @@ My expertise spans machine learning, cloud architecture, and full-stack developm
 				<!-- Two -->
 					<section id="two">
 						<h2>Recent Work</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<div class="image fit thumb"><img src="images/thumbs/cine.jpg" alt="" /></div>
-								<div class="project-header">
-									<h3>Cine-stellation</h3>
-									<a href="https://github.com/Sahasraditya/cine-stellation" class="github-link" target="_blank" title="View on GitHub">
-										<i class="fab fa-github"></i>
-									</a>
-								</div>
-								<p>A Movie recommendation system based around constellations.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<div class="image fit thumb"><img src="images/thumbs/t2c.jpg" alt="" /></div>
-								<div class="project-header">
-									<h3>Text 2 Comic</h3>
-									<a href="https://github.com/Sahasraditya/text2comic" class="github-link" target="_blank" title="View on GitHub">
-										<i class="fab fa-github"></i>
-									</a>
-								</div>
-								<p>Convert Text to Comic Strips using AI</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<div class="image fit thumb"><img src="images/thumbs/news-agg.png" alt="" /></div>
-								<div class="project-header">
-									<h3>News-Aggregator App</h3>
-									<a href="https://github.com/Sahasraditya/news-aggregator" class="github-link" target="_blank" title="View on GitHub">
-										<i class="fab fa-github"></i>
-									</a>
-								</div>
-								<p>A Kotlin based app to get personalized news.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<div class="image fit thumb"><img src="images/thumbs/cricgpt.jpg" alt="" /></div>
-								<div class="project-header">
-									<h3>IPL Statistics Chatbot</h3>
-									<a href="https://github.com/Sahasraditya/ipl-stats-chatbot" class="github-link" target="_blank" title="View on GitHub">
-										<i class="fab fa-github"></i>
-									</a>
-								</div>
-								<p>A chatbot using Langchain to get cricket statistics.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<div class="image fit thumb"><img src="images/thumbs/music-app.png" alt="" /></div>
-								<div class="project-header">
-									<h3>Music Separation App</h3>
-									<a href="https://github.com/Sahasraditya/music-component-seperator" class="github-link" target="_blank" title="View on GitHub">
-										<i class="fab fa-github"></i>
-									</a>
-								</div>
-								<p>A Deep Learning based Application to separate the various components of audio.</p>
-							</article>
 						
+						<!-- Featured Projects -->
+						<div class="featured-projects">
+							<div class="project-item">
+    <div class="project-image">
+        <img src="images/thumbs/cine.jpg" alt="Cine-stellation" />
+    </div>
+    <div class="project-content">
+        <h3>
+            Cine-stellation
+            <a href="https://github.com/Sahasraditya/cine-stellation" class="github-link" target="_blank" title="View on GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </h3>
+        <ul>
+            <li>Implemented collaborative filtering and content-based algorithms using scikit-learn and NumPy</li>
+            <li>Built REST API with Flask/FastAPI for real-time recommendation serving</li>
+            <li>Processed 50K+ movie dataset using Pandas with feature engineering on genres, ratings, and metadata</li>
+            <li>Deployed vector similarity search with cosine distance for constellation mapping visualization</li>
+            <li>Integrated D3.js frontend for interactive constellation rendering and user interaction</li>
+        </ul>
+        
+        <!-- Tech Stack Section -->
+        <div class="tech-stack">
+            <div class="tech-logos">
+                <div class="tech-logo python" data-tech="Python">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="tech-logo flask" data-tech="Flask">
+                    <img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="Flask">
+                </div>
+                <div class="tech-logo fastapi" data-tech="FastAPI">
+                    <img src="https://www.vectorlogo.zone/logos/fastapi/fastapi-icon.svg" alt="FastAPI">
+                </div>
+                <div class="tech-logo d3js" data-tech="D3.js">
+                    <img src="https://www.vectorlogo.zone/logos/d3js/d3js-icon.svg" alt="D3.js">
+                </div>
+                <div class="tech-logo javascript" data-tech="JavaScript">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <div class="tech-logo html" data-tech="HTML5">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <div class="tech-logo css" data-tech="CSS3">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+							   <div class="project-item">
+									<div class="project-image">
+										<img src='images/thumbs/t2c.jpg' alt="Text 2 Comic" />
+									</div>
+									<div class="project-content">
+										<h3>
+											Text 2 Comic
+											<a href="https://github.com/Sahasraditya/text2comic" class="github-link" target="_blank" title="View on GitHub">
+												<i class="fab fa-github"></i>
+											</a>
+										</h3>
+										<ul>
+											<li>AI-powered application that transforms written text into engaging comic strips automatically</li>
+											<li>Uses advanced natural language processing and computer vision techniques</li>
+											<li>Analyzes narrative structure and identifies key scenes for visual representation</li>
+											<li>Generates comic-style layouts with speech bubbles and appropriate visual elements</li>
+											<li>Perfect tool for educators, content creators, and storytellers</li>
+										</ul>
+										
+										<!-- Tech Stack Section -->
+										<div class="tech-stack">
+											<div class="tech-logos">
+												<div class="tech-logo python" data-tech="Python">
+													<i class="fab fa-python"></i>
+												</div>
+												<div class="tech-logo tensorflow" data-tech="TensorFlow">
+													<img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow">
+												</div>
+												<div class="tech-logo opencv" data-tech="OpenCV">
+													<img src="https://www.vectorlogo.zone/logos/opencv/opencv-icon.svg" alt="OpenCV">
+												</div>
+												<div class="tech-logo flask" data-tech="Flask">
+													<img src="https://www.vectorlogo.zone/logos/pocoo_flask/pocoo_flask-icon.svg" alt="Flask">
+												</div>
+												<div class="tech-logo javascript" data-tech="JavaScript">
+													<i class="fab fa-js-square"></i>
+												</div>
+												<div class="tech-logo html" data-tech="HTML5">
+													<i class="fab fa-html5"></i>
+												</div>
+												<div class="tech-logo css" data-tech="CSS3">
+													<i class="fab fa-css3-alt"></i>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							<div class="project-item">
+    <div class="project-image">
+        <img src="images/thumbs/cricgpt.jpg" alt="IPL Statistics Chatbot" />
+    </div>
+    <div class="project-content">
+        <h3>
+            IPL Statistics Chatbot
+            <a href="https://github.com/Sahasraditya/ipl-stats-chatbot" class="github-link" target="_blank" title="View on GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </h3>
+        <ul>
+            <li>Intelligent chatbot built with LangChain for comprehensive IPL cricket statistics</li>
+            <li>Accepts natural language questions about player performance and team statistics</li>
+            <li>Processes vast amounts of cricket data for accurate, contextual responses</li>
+            <li>Provides detailed analysis with historical comparisons and seasonal trends</li>
+            <li>Covers match histories, player stats, and team performance metrics</li>
+        </ul>
+        
+        <!-- Tech Stack Section -->
+        <div class="tech-stack">
+            <div class="tech-logos">
+                <div class="tech-logo python" data-tech="Python">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="tech-logo langchain" data-tech="LangChain">
+                    <img src="https://python.langchain.com/img/brand/wordmark.png" alt="LangChain">
+                </div>
+                <div class="tech-logo openai" data-tech="OpenAI">
+                    <img src="https://www.vectorlogo.zone/logos/openai/openai-icon.svg" alt="OpenAI">
+                </div>
+                <div class="tech-logo streamlit" data-tech="Streamlit">
+                    <img src="https://www.vectorlogo.zone/logos/streamlit/streamlit-icon.svg" alt="Streamlit">
+                </div>
+                <div class="tech-logo sqlite" data-tech="SQLite">
+                    <img src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="SQLite">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 						</div>
+
+						<!-- Hidden Additional Projects -->
+						<div class="additional-projects hidden">
+						<div class="project-item">
+    <div class="project-image">
+        <img src="images/thumbs/news-agg.png" alt="News Aggregator App" />
+    </div>
+    <div class="project-content">
+        <h3>
+            News-Aggregator App
+            <a href="https://github.com/Sahasraditya/news-aggregator" class="github-link" target="_blank" title="View on GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </h3>
+        <ul>
+            <li>Kotlin-based Android application that curates personalized news feeds</li>
+            <li>Uses machine learning to understand user preferences and deliver relevant content</li>
+            <li>Features smart categorization and offline reading capabilities</li>
+            <li>Includes push notifications for breaking news updates</li>
+            <li>Aggregates content from multiple trusted news sources</li>
+        </ul>
+        
+        <!-- Tech Stack Section -->
+        <div class="tech-stack">
+            <div class="tech-logos">
+                <div class="tech-logo kotlin" data-tech="Kotlin">
+                    <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin">
+                </div>
+                <div class="tech-logo android" data-tech="Android">
+                    <i class="fab fa-android"></i>
+                </div>
+                <div class="tech-logo android-studio" data-tech="Android Studio">
+                    <img src="https://developer.android.com/studio/images/studio-icon.svg" alt="Android Studio">
+                </div>
+                <div class="tech-logo retrofit" data-tech="Retrofit">
+                    <img src="https://square.github.io/retrofit/static/icon-square.png" alt="Retrofit">
+                </div>
+                <div class="tech-logo room" data-tech="Room DB">
+                    <img src="https://developer.android.com/images/brand/Android_Robot.png" alt="Room">
+                </div>
+                <div class="tech-logo firebase" data-tech="Firebase">
+                    <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="Firebase">
+                </div>
+                <div class="tech-logo gson" data-tech="Gson">
+                    <img src="https://www.vectorlogo.zone/logos/google/google-icon.svg" alt="Gson">
+                </div>
+                <div class="tech-logo gradle" data-tech="Gradle">
+                    <img src="https://www.vectorlogo.zone/logos/gradle/gradle-icon.svg" alt="Gradle">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+							<div class="project-item">
+    <div class="project-image">
+        <img src="images/thumbs/music-app.png" alt="Music Separation App" />
+    </div>
+    <div class="project-content">
+        <h3>
+            Music Separation App
+            <a href="https://github.com/Sahasraditya/music-component-seperator" class="github-link" target="_blank" title="View on GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </h3>
+        <ul>
+            <li>Deep learning application for separating individual components from mixed audio tracks</li>
+            <li>Isolates vocals, drums, bass, and other instruments using advanced neural networks</li>
+            <li>Built with cutting-edge signal processing techniques</li>
+            <li>Perfect tool for music producers, DJs, and audio engineers</li>
+            <li>Enables extraction of specific elements from existing recordings</li>
+        </ul>
+        
+        <!-- Tech Stack Section -->
+        <div class="tech-stack">
+            <div class="tech-logos">
+                <div class="tech-logo python" data-tech="Python">
+                    <i class="fab fa-python"></i>
+                </div>
+                <div class="tech-logo pytorch" data-tech="PyTorch">
+                    <img src="https://www.vectorlogo.zone/logos/pytorch/pytorch-icon.svg" alt="PyTorch">
+                </div>
+                <div class="tech-logo tensorflow" data-tech="TensorFlow">
+                    <img src="https://www.vectorlogo.zone/logos/tensorflow/tensorflow-icon.svg" alt="TensorFlow">
+                </div>
+                <div class="tech-logo librosa" data-tech="Librosa">
+                    <img src="https://librosa.org/doc/main/_static/librosa_logo_text.svg" alt="Librosa">
+                </div>
+                <div class="tech-logo numpy" data-tech="NumPy">
+                    <img src="https://www.vectorlogo.zone/logos/numpy/numpy-icon.svg" alt="NumPy">
+                </div>
+                <div class="tech-logo scipy" data-tech="SciPy">
+                    <img src="https://www.vectorlogo.zone/logos/scipy/scipy-icon.svg" alt="SciPy">
+                </div>
+                <div class="tech-logo matplotlib" data-tech="Matplotlib">
+                    <img src="https://matplotlib.org/_static/images/logo2.svg" alt="Matplotlib">
+                </div>
+                <div class="tech-logo streamlit" data-tech="Streamlit">
+                    <img src="https://www.vectorlogo.zone/logos/streamlit/streamlit-icon.svg" alt="Streamlit">
+                </div>
+                <div class="tech-logo jupyter" data-tech="Jupyter">
+                    <img src="https://www.vectorlogo.zone/logos/jupyter/jupyter-icon.svg" alt="Jupyter">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+						</div>
+
+						<!-- See More Button -->
+						<div class="see-more-container">
+							<button class="see-more-btn" onclick="toggleProjects()">
+								<i class="fas fa-plus"></i>
+								<span id="toggle-text">See More Projects</span>
+							</button>
+						</div>
+
 					</section>
 
 				<!-- Three -->
@@ -270,6 +430,25 @@ My expertise spans machine learning, cloud architecture, and full-stack developm
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
+			<!-- Custom JavaScript for See More functionality -->
+			<script>
+				function toggleProjects() {
+					const additionalProjects = document.querySelector('.additional-projects');
+					const toggleText = document.getElementById('toggle-text');
+					const icon = document.querySelector('.see-more-btn i');
+					
+					if (additionalProjects.classList.contains('hidden')) {
+						additionalProjects.classList.remove('hidden');
+						toggleText.textContent = 'Show Less';
+						icon.className = 'fas fa-minus';
+					} else {
+						additionalProjects.classList.add('hidden');
+						toggleText.textContent = 'See More Projects';
+						icon.className = 'fas fa-plus';
+					}
+				}
+			</script>
 
 	</body>
 </html>
