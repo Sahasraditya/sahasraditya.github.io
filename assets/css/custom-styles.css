@@ -52,9 +52,9 @@ header.major {
 
 /* Sidebar adjustments */
 #header {
-    width: 17vw;  /* Viewport width units scale with zoom */
-    /* min-width: 180px;  Minimum width to prevent too small */
-    /* max-width: 250px;  Maximum width to prevent too large */
+    width: 15vw;  /* Viewport width units scale with zoom */
+    min-width: 180px;  
+    max-width: 250px;  
     position: fixed;
     top: 0;
     left: 0;
@@ -516,15 +516,22 @@ header.major {
     top: auto;
     left: auto;
     right: auto;
+    min-width: 100vw;
     width: 100vw;
     height: auto;
     margin-top: 80px; /* if using fixed .nav-header */
-    background: rgba(27, 31, 34, 0.98);
+    /* background: rgba(27, 31, 34, 0.98); */
     z-index: 1000;
     backdrop-filter: blur(10px);
     display: block;
     box-sizing: border-box;
   }
+
+  .nav-menu li{
+    color:#ffffff;
+  }
+
+
 
    #header > .inner {
     width: 100%;
