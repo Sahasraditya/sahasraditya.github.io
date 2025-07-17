@@ -12,18 +12,10 @@ header.major {
     backdrop-filter: blur(10px);
     z-index: 999;
     padding: 1rem 0;
-    /* color: #333; */
+    color: #333;
     /* border-bottom: 1px solid rgba(255,255,255,0.1); */
 }
 
-.about_me {
-    color: #333333; /* Dark gray for normal text */
-}
-
-.about_me strong {
-    color: #000000; /* Pure black for bolded text */
-    font-weight: 900; /* Extra thick weight */
-}
 
 .nav-container {
     max-width: 1200px;
@@ -61,8 +53,8 @@ header.major {
 /* Sidebar adjustments */
 #header {
     width: 17vw;  /* Viewport width units scale with zoom */
-    min-width: 180px;  /* Minimum width to prevent too small */
-    max-width: 250px;  /* Maximum width to prevent too large */
+    /* min-width: 180px;  Minimum width to prevent too small */
+    /* max-width: 250px;  Maximum width to prevent too large */
     position: fixed;
     top: 0;
     left: 0;
@@ -444,5 +436,165 @@ header.major {
     .college-logo {
         margin-left: 0;
         margin-top: 15px;
+    }
+}
+
+
+
+/* XLarge */
+
+	@media screen and (max-width: 1800px) {
+
+		/* Basic */
+
+			body, input, select, textarea {
+				font-size: 12pt;
+			}
+
+	}
+
+/* Large */
+
+	@media screen and (max-width: 1280px) {
+
+		/* Header */
+
+			#header {
+				padding: 6em 3em 3em 3em;
+				width: 30%;
+			}
+
+				#header h1 {
+					font-size: 1.25em;
+				}
+
+					#header h1 br {
+						display: none;
+					}
+
+				#header > .inner {
+					margin-bottom: 0;
+				}
+
+		/* Footer */
+
+			#footer .copyright li {
+				border-left-width: 0;
+				display: block;
+				line-height: 2.25em;
+				margin-left: 0;
+				padding-left: 0;
+			}
+
+		/* Main */
+
+			#main {
+				margin-left: 30%;
+				max-width: none;
+				padding: 6em 3em 3em 3em;
+				width: calc(100% - 30%);
+			}
+
+	}
+@media screen and (max-width: 980px) {
+
+    /* NAV HEADER (from 768px block) */
+    .nav-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        /* background: rgba(27, 31, 34, 0.95); */
+        backdrop-filter: blur(10px);
+        z-index: 1001; /* Higher than sidebar */
+        padding: 1rem 0;
+    }
+
+    /* HEADER */
+    #header {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100vw;
+    height: auto;
+    margin-top: 80px; /* if using fixed .nav-header */
+    background: rgba(27, 31, 34, 0.98);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    display: block;
+    box-sizing: border-box;
+  }
+
+   #header > .inner {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  #header img {
+    display: block;
+    margin: 0 auto 1rem auto;
+  }
+
+    #header h1 {
+        font-size: 1.75em;
+    }
+
+    #header h1 br {
+        display: inline;
+    }
+
+    /* MAIN */
+    #main {
+        margin: 0;
+        margin-left: 0;
+        padding: 6em 4em;
+        padding-top: 0;
+        width: 100%;
+    }
+
+    /* LIST */
+    h1 br, h2 br, h3 br, h4 br, h5 br, h6 br {
+        display: none;
+    }
+
+    ul.icons li .icon {
+        font-size: 1.25em;
+    }
+
+    /* FOOTER */
+    #footer {
+        background-attachment: scroll;
+        background-color: #1f1816;
+        background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+        background-position: top left, bottom center;
+        background-repeat: repeat, no-repeat;
+        background-size: auto, cover;
+        bottom: auto;
+        left: auto;
+        padding: 4em 4em 6em 4em;
+        position: relative;
+        text-align: center;
+        width: 100%;
+    }
+
+    #footer .icons {
+        margin: 0 0 1em 0;
+    }
+
+    #footer .copyright {
+        margin: 0 0 1em 0;
+    }
+
+    #footer .copyright li {
+        border-left-width: 1px;
+        display: inline-block;
+        line-height: 1em;
+        margin-left: 0.75em;
+        padding-left: 0.75em;
     }
 }
