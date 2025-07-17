@@ -2058,8 +2058,11 @@ input, select, textarea {
 }
 
 .image.fit img {
-	width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* prevents cropping */
 }
+
 
 
 /* List */
@@ -2512,7 +2515,7 @@ input, select, textarea {
 		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
-		background-size: auto,								150%;
+		background-size: auto,150%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
@@ -2994,7 +2997,7 @@ input, select, textarea {
 
 			#footer {
 				background-attachment: scroll;
-				background-color: #1f1815;
+				background-color: #1f1816;
 				background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 				background-position: top left,						bottom center;
 				background-repeat: repeat,							no-repeat;
@@ -3136,3 +3139,102 @@ input, select, textarea {
 			}
 
 	}
+
+/* ===== DARK MODE BASE ===== */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Typography */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode .about_me,
+body.dark-mode .nav-header .nav-container a{
+  color: #ffffff;
+}
+
+/* Links */
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode a:hover {
+  color: #64b5f6;
+}
+
+/* ===== MAIN CONTENT AREA ONLY ===== */
+body.dark-mode main,
+body.dark-mode main section,
+body.dark-mode .project-item {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Project Cards */
+body.dark-mode .project-item {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+body.dark-mode .project-item h3 {
+  color: #ffffff;
+}
+
+/* Buttons */
+body.dark-mode .resume-button,
+body.dark-mode .see-more-btn {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+body.dark-mode .resume-button:hover {
+  background-color: #333;
+}
+
+/* ===== NAVIGATION (STAYS LIGHT OR MINIMALLY DARK) ===== */
+.nav-header {
+  border-bottom: 1px solid #ccc;
+  
+}
+
+.nav-menu a {
+  color: #333;
+}
+
+.nav-menu a:hover {
+  color: #000;
+}
+
+/* ===== FOOTER (STAYS LIGHT) ===== */
+
+
+/* ===== DARK MODE TOGGLE ===== */
+.dark-mode-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ===== TRANSITIONS FOR SMOOTHNESS ===== */
+body,
+main,
+section,
+.project-item,
+.nav-header,
+#footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+

@@ -11,6 +11,32 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 	</head>
 	<body class="is-preload">
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const toggle = document.getElementById('dark-mode-toggle');
+				const body = document.body;
+
+				if (!toggle) return; // Safety check
+
+				// Load preference on page load
+				if (localStorage.getItem('theme') === 'dark') {
+				body.classList.add('dark-mode');
+				toggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
+				}
+
+				toggle.addEventListener('click', () => {
+				body.classList.toggle('dark-mode');
+				const isDark = body.classList.contains('dark-mode');
+				toggle.querySelector('i').classList.replace(
+					isDark ? 'fa-moon' : 'fa-sun',
+					isDark ? 'fa-sun' : 'fa-moon'
+				);
+				localStorage.setItem('theme', isDark ? 'dark' : 'light');
+				});
+			});
+		</script>
+
+
 
 		<!-- Navigation Header -->
 		<nav class="nav-header">
@@ -22,7 +48,12 @@
 					<li><a href="#two">Projects</a></li>
 					<li><a href="#three">Contact</a></li>
 				</ul>
+			<!-- Add inside nav-header or header -->
+			<button id="dark-mode-toggle" class="dark-mode-toggle">
+				<i class="fas fa-moon"></i>
+			</button>
 			</div>
+			
 		</nav>
 
 		<!-- Header -->
@@ -33,7 +64,6 @@
 					</h1>
 					Software Engineer<br>
 					Data Analyst <br>
-					Student <br>
 				</div>
 			</header>
 
@@ -49,13 +79,13 @@
 					<p class = 'about_me'>
 						I'm a software engineer who builds likes to build cool stuff. As a CS grad at CU Boulder, I specialize in building creative tools and turning them into production ready systems 
 					<p class = 'about_me'>
-						Whether I'm architecting <strong>backend systems</strong>, training <strong>ML models</strong>, or crafting <strong>full-stack applications</strong>, I focus on building software that's both technically robust and innovative. I work across the entire stack with 
-						<i class="fab fa-react" title="React" style="color:#61DBFB;"></i> <strong>React</strong>, 
-						<i class="fab fa-python" title="Python" style="color:#3776AB;"></i> <strong>Python</strong>, and 
-						<i class="fab fa-google" title="Google Cloud" style="color:#4285F4;"></i> <strong>GCP</strong>, leveraging modern tools like <strong>LangChain</strong>, <strong>Docker</strong>, and <strong>Kubernetes</strong> to ensure systems scale seamlessly from prototype to production.
+						Whether I'm architecting backend systems, training ML models, or crafting full-stack applications, I focus on building software that's both technically robust and innovative. I work across the entire stack with 
+						 React, 
+						 Python, and 
+						 GCP, leveraging modern tools like LangChain, Docker, and Kubernetes to ensure systems scale seamlessly from prototype to production.
 					</p>
 					<ul class="actions">
-						<li><a href="assets/resume/saha_new_swe_resume.pdf" target="_blank" class="resume-button">
+						<li><a href="assets/resume/saha_sde_resume.pdf" target="_blank" class="resume-button">
 							<i class="fas fa-file-pdf"></i>
 							View Resume
 						</a></li>
@@ -323,7 +353,7 @@
 
 							<div class="project-item">
     <div class="project-image">
-        <img src="images/thumbs/music-app.png" alt="Music Separation App" />
+        <img src="images/thumbs/music-app-2.jpg" alt="Music Separation App" />
     </div>
     <div class="project-content">
         <h3>

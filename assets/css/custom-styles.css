@@ -60,7 +60,9 @@ header.major {
 
 /* Sidebar adjustments */
 #header {
-    width: 220px;
+    width: 17vw;  /* Viewport width units scale with zoom */
+    min-width: 180px;  /* Minimum width to prevent too small */
+    max-width: 250px;  /* Maximum width to prevent too large */
     position: fixed;
     top: 0;
     left: 0;
@@ -71,7 +73,7 @@ header.major {
 }
 
 #main {
-    margin-left: 220px;
+    margin-left: 17vw;  /* Match sidebar width */
     padding-top: 70px;
 }
 
