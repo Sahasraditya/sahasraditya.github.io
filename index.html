@@ -198,9 +198,8 @@
 		</h3>
 		<ul>
 			<li>AI-powered application that transforms written text into engaging comic strips automatically</li>
-			<li>Uses advanced natural language processing and computer vision techniques</li>
-			<li>Analyzes narrative structure and identifies key scenes for visual representation</li>
-			<li>Generates comic-style layouts with speech bubbles and appropriate visual elements</li>
+			<li>Used OpenAI and Stable diffusion to convert text to storylines, and storylines to comic strips.</li>
+			<li>Integrated a  Message Queue using Google Pub/Sub for async communication and Redis for caching previously generated comics.</li>
 			<li>Perfect tool for educators, content creators, and storytellers</li>
 		</ul>
 	
@@ -291,8 +290,7 @@
             <li>Intelligent chatbot built with LangChain for comprehensive IPL cricket statistics</li>
             <li>Accepts natural language questions about player performance and team statistics</li>
             <li>Processes vast amounts of cricket data for accurate, contextual responses</li>
-            <li>Provides detailed analysis with historical comparisons and seasonal trends</li>
-            <li>Covers match histories, player stats, and team performance metrics</li>
+            <li>Answers queries about cricket-specific metrics such as strike rates and averages.</li>
         </ul>
         
         <!-- Tech Stack Section -->
@@ -330,10 +328,10 @@
         </h3>
         <ul>
             <li>Kotlin-based Android application that curates personalized news feeds</li>
-            <li>Uses machine learning to understand user preferences and deliver relevant content</li>
-            <li>Features smart categorization and offline reading capabilities</li>
-            <li>Includes push notifications for breaking news updates</li>
-            <li>Aggregates content from multiple trusted news sources</li>
+            <li>Used the public news Api to collect news and split into different topics.</li>
+            <li>Cached recently fetched news using Redis and stored user data and preferences in Cloud SQL.</li>
+            <li>Deployed the web app using Google Cloud Run.</li>
+			<li>Setup a service which sends users a daily newsfeed.</li>
         </ul>
         
         <!-- Tech Stack Section -->
@@ -364,10 +362,9 @@
         </h3>
         <ul>
             <li>Deep learning application for separating individual components from mixed audio tracks</li>
-            <li>Isolates vocals, drums, bass, and other instruments using advanced neural networks</li>
-            <li>Built with cutting-edge signal processing techniques</li>
-            <li>Perfect tool for music producers, DJs, and audio engineers</li>
-            <li>Enables extraction of specific elements from existing recordings</li>
+            <li>Created a kubernetes cluster that provides a REST API for automatic music separation service</li>
+            <li>Worker uses the open source waveform source separation analysis software from Facebook</li>
+            <li>Used min.io to store cached results.</li>
         </ul>
         
         <!-- Tech Stack Section -->
